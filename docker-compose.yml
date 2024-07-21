@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  ewelink-mqtt:
+    image: ewelink-mqtt
+    container_name: ewelink-mqtt
+    environment:
+      - MQTT_HOSTNAME=vps.rsmm.be
+      - MQTT_PORT=8885
+      - MQTT_USER=user
+      - MQTT_PASSWORD=Theo1990
+      - EWELINK_USER=vandendriesschetheo@hotmail.com
+      - EWELINK_PASSWORD=TREXMVqRgKPKb@z55f$$z
+      - EWELINK_DEVICE_ID=10017c304b

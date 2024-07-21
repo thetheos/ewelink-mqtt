@@ -34,7 +34,7 @@ class Device:
         self.apikey: str | None = data.get('apikey', None)
         self.id: str = data.get('deviceid', '0')
         self.brand: Brand = Brand(
-            name = data.get('brandName', None), 
+            name = data.get('brandName', None),
             logo = Asset(data.get('brandLogoUrl', None), session=state.http.session if state else None)
         )
         self.url: str | None = data.get('deviceUrl', None)

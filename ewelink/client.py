@@ -63,6 +63,12 @@ class Client:
     def _get_state(self) -> Connection:
         return Connection(ws = self.ws, http = self.http)
 
+    async def update(self):
+        self._devices =\
+        {
+            device['deviceid']: Device(data = device, state = self._get_state()) for device in (await self.http.get_devices()).get('devicelist', [])
+        }
+
     def get_device(self, id: str) -> Device | None:
         return self.devices.get(id)
 

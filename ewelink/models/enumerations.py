@@ -55,9 +55,9 @@ class DeviceType(Enum):
     WARM_AIR_BLOWER = 1003
 
 class Power(Enum):
-    off = 'off'
-    on = 'on'
-    unknown = 'unknown'
+    off = 0 #'off'
+    on = 1 #'on'
+    unknown = -1 #'unknown'
 
     def __init__(self, *args) -> None:
         self.channels = tuple()
